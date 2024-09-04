@@ -28,7 +28,7 @@ jobs:
       run: |
         ${GITHUB_WORKSPACE}/sl --version
         ${GITHUB_WORKSPACE}/sl analyze -v --strict --wait \
-          --app shiftleft-go-demo \
+          --app shiftleft-go-demo-NEW \
           --tag branch=${{ github.head_ref }} \
           --go --container 18fgsa/s3-resource $(pwd)
       env:
