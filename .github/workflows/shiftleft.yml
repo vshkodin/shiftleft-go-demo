@@ -27,8 +27,8 @@ jobs:
     - name: preZero Static Analysis
       run: |
         ${GITHUB_WORKSPACE}/sl --version
-        ${GITHUB_WORKSPACE}/sl analyze -v --strict --wait \
-          --app shiftleft-go-demo-NEW \
+        ${GITHUB_WORKSPACE}/sl analyze -v --secrets-only --strict --wait \
+          --app shiftleft-go-demo-NEW-secrets-only \
           --tag branch=${{ github.head_ref }} \
           --go --container 18fgsa/s3-resource $(pwd)
       env:
